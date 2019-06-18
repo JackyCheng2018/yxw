@@ -1,0 +1,1161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="js/jquery.js"></script>
+<script src="js/swfobject.js"></script>
+<script src="js/jquery.tip_new.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>应学网</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+$(function(){
+	$(".box_nav_left li:eq(0) a").mouseover( function(){
+		$(".box_nav_xia div:eq(0)").show();	
+		$(".box_nav_xia div:eq(0)").siblings().hide();	
+	});	
+	$(".box_nav_left li:eq(1) a").mouseover( function(){
+		$(".box_nav_xia div:eq(1)").show();	
+		$(".box_nav_xia div:eq(1)").siblings().hide();	
+	});	
+	$(".box_nav_left li:eq(2) a").mouseover( function(){
+		$(".box_nav_xia div:eq(2)").show();	
+		$(".box_nav_xia div:eq(2)").siblings().hide();	
+	});	
+	$(".box_nav_left li:eq(3) a").mouseover( function(){
+		$(".box_nav_xia div:eq(3)").show();	
+		$(".box_nav_xia div:eq(3)").siblings().hide();	
+	});
+	$(".box_nav_left li:eq(4) a").mouseover( function(){
+		$(".box_nav_xia div:eq(4)").show();	
+		$(".box_nav_xia div:eq(4)").siblings().hide();	
+	});
+	$(".box_nav_left li:eq(5) a").mouseover( function(){
+		$(".box_nav_xia div:eq(5)").show();	
+		$(".box_nav_xia div:eq(5)").siblings().hide();	
+	});
+	$(".box_nav_left li:eq(6) a").mouseover( function(){
+		$(".box_nav_xia div:eq(6)").show();	
+		$(".box_nav_xia div:eq(6)").siblings().hide();	
+	});
+	$(".box_nav_left li:eq(7) a").mouseover( function(){
+		$(".box_nav_xia div:eq(7)").show();	
+		$(".box_nav_xia div:eq(7)").siblings().hide();	
+	});
+	$(".box_city_left_content_course_huan li .hui").mouseover(function(){
+		$(".box_city_left_content_course").hide();
+		$(".box_city_left_content_course_2").show();
+	});
+	$(".box_city_left_content_course_2_huan li .hui").mouseover(function(){
+		$(".box_city_left_content_course_2").hide();
+		$(".box_city_left_content_course").show();
+	});
+	$(".box_city_right_city li:eq(0)").click(function(){
+		$(this).addClass("box_city_right_city_current");
+		$(this).siblings().removeClass("box_city_right_city_current");
+		$(".city1").show();
+		$(".city1").siblings().hide();
+		$(".box_city_right_city").show();
+	});
+	$(".box_city_right_city li:eq(1)").click(function(){
+		$(this).addClass("box_city_right_city_current");
+		$(this).siblings().removeClass("box_city_right_city_current");
+		$(".city2").show();
+		$(".city2").siblings().hide();
+		$(".box_city_right_city").show();
+	});
+	$(".box_city_right_city li:eq(2)").click(function(){
+		$(this).addClass("box_city_right_city_current");
+		$(this).siblings().removeClass("box_city_right_city_current");
+		$(".city3").show();
+		$(".city3").siblings().hide();
+		$(".box_city_right_city").show();
+	});
+	$(".box_city_right_city li:eq(3)").click(function(){
+		$(this).addClass("box_city_right_city_current");
+		$(this).siblings().removeClass("box_city_right_city_current");
+		$(".city4").show();
+		$(".city4").siblings().hide();
+		$(".box_city_right_city").show();
+	});
+})
+</script>
+<script type="text/javascript">   
+	$(document).ready(function(){
+		$(".sup").tap({width:374,type:"diy",position:{left:15},callback:function(target,tipWarp){
+			var telHtml="";
+			if(target.attr("tel").length==5){
+				telHtml='<span class="c_266e23">4006165151</span>转<span class="c_ff5a00">'+target.attr("tel")+'</span>';
+			}else{
+				telHtml='<span class="c_266e23">'+target.attr("tel")+'</span>';
+				
+			}
+			var links=[];
+			var sid=target.attr("sid");
+			link="http://www.sooker.com/"+sid+"/";
+			links[1]=links[0]+"jieshao.html";
+			tipWarp.html('<h2 class="tit"><a href="'+link+'" target="_blank">'+target.text()+'</a></h2><p class="txt">'+target.attr("desc")+'<a href="'+link+'jieshao.html" target="_blank">[详细]</a></p> <div class="blank_20"></div><strong>免费咨询电话：'+telHtml+'</strong><p class="links"><a href="'+link+'jieshao.html" target="_blank">机构介绍</a> | <a href="'+link+'kecheng.html" target="_blank">精品课程</a> | <a href="'+link+'teacher.html" target="_blank">名师风采</a> | <a href="'+link+'news.html" target="_blank">新闻</a> | <a href="'+link+'photo.html" target="_blank">相册</a> | <a href="'+link+'video.html" target="_blank">视频</a> | <a href="'+link+'comment.html" target="_blank">评论</a></p>');
+		}})
+	})
+	
+	<!--
+jQuery(function($){
+	var $siteNav=$('#site-nav')
+		,$menus=$('.menu',$siteNav);
+	$menus.hover(function(){
+		$(this).addClass('hover');
+	},function(){
+		$(this).removeClass('hover');
+	});
+});
+//-->
+//滑动门
+function tab(position,sum,now){
+
+	for(i=1;i<=sum;i++){
+		$("#tab"+position+"_"+i).removeClass("hover_style");
+		$("#tab"+position+"_c"+i).css("display","none");
+	}
+	$("#tab"+position+"_"+now).addClass("hover_style");
+	$("#tab"+position+"_c"+now).css("display","block");
+}
+//焦点图
+function tabimages(num){
+
+	$('#ifocus_btn li').each(function(){
+			$(this).removeClass('current').removeClass('normal');
+			$(this).addClass('normal');
+	});
+	$('#ifocus_btn li:eq('+num+')').removeClass('normal').addClass('current');
+	$("#ifocus_piclist").stop();
+
+			$("#ifocus_piclist").animate({top: -(128*num)}, {duration: 100});
+			//焦点图文字当前位置
+			var num=$("#ifocus_btn ul li").index($("#ifocus_btn .current")[0]);
+			$('#ifocus_tx li').each(function(j){
+				$(this).removeClass('current').removeClass('normal');
+				$(this).addClass('normal');
+			});
+			$('#ifocus_tx li:eq('+num+')').removeClass('normal').addClass('current');
+
+}
+$(document).ready(function(){
+	var initnum=-1;
+	var initsum=$('#ifocus_btn li').length-1;
+	function beginshow(){
+		tabtimer=setInterval(function(){
+			if(initnum==initsum){
+				initnum=0;
+			}else{
+				initnum++;
+			}
+        tabimages(initnum);
+		}, 3000);
+	}
+   beginshow();
+   $('#ifocus_btn li').each(function(i){
+		$(this).mouseover(function(){
+			var num=$("#ifocus_btn ul li").index(this);
+			tabimages(num);
+			initnum=num;
+			clearInterval(tabtimer);
+			});
+	}).mouseout(function(){beginshow();});
+})
+//首页左侧划出菜单
+$(function(){
+   $(".menu ul > li.s").bind({
+		mouseenter:function(){
+			var n=$(".menu ul > li.s").index(this);
+			$(this).addClass("current");					
+			var off_top=$(this).offset().top;
+			var off_left=$(this).offset().left;
+			var cli_bot=document.documentElement.clientHeight+Math.max(document.documentElement.scrollTop,document.body.scrollTop)-off_top;
+			if(cli_bot<$(".menulist").eq(n).innerHeight()+10)
+			{off_top=off_top-$(".menulist").eq(n).innerHeight()+cli_bot-10}
+			
+			$(".menulist").eq(n).css({top:off_top,left:off_left+141}).show();
+			
+			},
+		mouseleave:function(){
+			
+			var n=$(".menu ul > li.s").index(this)
+			$(this).removeClass("current");
+			$(".menulist").eq(n).hide();
+		}
+	})
+	$(".menulist").bind({
+		mouseenter:function(){
+			var n=$(".menulist").index(this);
+			$(".menu ul > li.s").eq(n).addClass("current")
+			$(this).show()},
+		mouseleave:function(){
+			var n=$(".menulist").index(this)
+			$(".menu ul > li.s").eq(n).removeClass("current");
+			$(this).hide()
+		}
+	})
+})
+</script>
+<body>
+<div class="zuishang">
+    <div class="zuishang_left fl"><a href="#">收藏应学网</a></div>
+    <div class="zuishang_center fl">您好，欢迎来到应学网！<a href="login.html">[请登录]</a>，新用户？<a class="zhuce" href="zhuce.html">[免费注册]</a></div>
+    <ul class="zuishang_right fl">
+    	<li><a href="index.html">网站首页</a></li>
+        <li><a href="nei_index.html">联系我们</a></li>
+        <li class="meixian"><a href="wangzhanditu.html">网站地图</a></li>
+    </ul>
+</div>
+<div class="box_logo">
+	<div class="box_logo_1 fl"><a href="index.html"><img src="images/logo.jpg" /></a></div>
+    <div class="box_logo_2 fl"><a href="index.html"><img src="images/home.jpg" /></a><p><a href="#">网站首页</a></p></div>
+    <div class="box_logo_2 fl"><a href="xuankecheng2.html"><img src="images/book.jpg" /></a><p><a href="#">选课程</a></p></div>
+    <div class="box_logo_2 fl"><a href="xuanlaoshi2.html"><img src="images/teacher.jpg" /></a><p><a href="#">选老师</a></p></div>
+    <div class="box_logo_2 fl"><a href="xuanxuexiao2.html"><img src="images/find.jpg" /></a><p><a href="#">选学校</a></p></div>
+    <div class="box_logo_3 box_logo_4 fl"><a href="xuankecheng3.html"><img src="images/fenlei.jpg" /></a></div>
+    <div class="box_logo_3 fl"><a href="xuankecheng.html"><img src="images/demand.jpg" /></a></div>
+</div>
+<div class="box_nav">
+	<ul class="box_nav_left fl">
+    	<li><a href="xinwenshouye.html">新闻首页</a></li>
+        <li><a href="xuankecheng2.html">外语培训</a></li>
+        <li><a href="xuankecheng2.html">计算机培训</a></li>
+        <li><a href="xuankecheng2.html">管理培训</a></li>
+        <li><a href="xuankecheng2.html">兴趣爱好培训</a></li>
+        <li><a href="xuankecheng2.html">职业技能</a></li>
+        <li><a href="xuankecheng2.html">0-18岁</a></li>
+        <li class="youmei"><a href="xuankecheng2.html">出国留学</a></li>
+    </ul>
+    <div class="box_nav_right fr"><input class="sousuo1 fl" type="text" /><input class="sousuo2 fl" type="button" /></div>
+</div>
+<div class="box_nav_xia">
+	<div class="box_nav_xia_1 box_nav_xia_1_current"><a href="xuankecheng2.html">雅思培训</a><a href="#">商务英语培训</a><a href="#">英语口语</a><a href="#">新概念英语培训</a><a href="#">大学英语等级考试</a><a href="#">公共英语</a><a href="#">小语种培训</a><a href="#">汉语方言培训</a><a href="#">新托福</a></div>
+    <div class="box_nav_xia_1"><a href="#">商务英语培训</a><a href="#">雅思培训</a><a href="#">英语口语</a><a href="#">新概念英语培训</a><a href="#">大学英语等级考试</a><a href="#">公共英语</a><a href="#">小语种培训</a><a href="#">汉语方言培训</a><a href="#">新托福</a></div>
+    <div class="box_nav_xia_1"><a href="#">商务英语培训</a><a href="#">英语口语</a><a href="#">雅思培训</a><a href="#">新概念英语培训</a><a href="#">大学英语等级考试</a><a href="#">公共英语</a><a href="#">小语种培训</a><a href="#">汉语方言培训</a><a href="#">新托福</a></div>
+    <div class="box_nav_xia_1"><a href="#">公共英语</a><a href="#">商务英语培训</a><a href="#">汉语方言培训</a><a href="#">新概念英语培训</a><a href="#">大学英语等级考试</a><a href="#">雅思培训</a><a href="#">小语种培训</a><a href="#">英语口语</a><a href="#">新托福</a></div>
+    <div class="box_nav_xia_1"><a href="#">雅思培训</a><a href="#">新托福</a><a href="#">英语口语</a><a href="#">新概念英语培训</a><a href="#">大学英语等级考试</a><a href="#">公共英语</a><a href="#">小语种培训</a><a href="#">汉语方言培训</a><a href="#">商务英语培训</a></div>
+    <div class="box_nav_xia_1"><a href="#">新概念英语培训</a><a href="#">商务英语培训</a><a href="#">英语口语</a><a href="#">雅思培训</a><a href="#">大学英语等级考试</a><a href="#">公共英语</a><a href="#">小语种培训</a><a href="#">汉语方言培训</a><a href="#">新托福</a></div>
+    <div class="box_nav_xia_1"><a href="#">汉语方言培训</a><a href="#">商务英语培训</a><a href="#">新概念英语培训</a><a href="#">英语口语</a><a href="#">大学英语等级考试</a><a href="#">公共英语</a><a href="#">小语种培训</a><a href="#">雅思培训</a><a href="#">新托福</a></div>
+    <div class="box_nav_xia_1"><a href="#">雅思培训</a><a href="#">新托福</a><a href="#">英语口语</a><a href="#">公共英语</a><a href="#">大学英语等级考试</a><a href="#">新概念英语培训</a><a href="#">小语种培训</a><a href="#">汉语方言培训</a><a href="#">商务英语培训</a></div>
+</div>
+<div class="blank10"></div>
+<div class="box_nan">
+    <div class="box_nan_left fl">
+    	<div id="sideBarNav">
+
+		<div class="tit fenlei">全部分类</div>
+		<div class="menuListCont">
+			<div class="menu" area="indexmenu" widget_type="area">
+              
+<div id="_widget_566" name="html" widget_type="widget" class="widget">
+<ul class="menuListUl">
+  <li class="s"><a href="xuankecheng2.html">语言培训</a></li>
+  <li class="s"><a href="#">1对1辅导</a></li>
+<li class="s"><a href="#">IT类培训</a></li>
+<li class="s"><a href="#">职业培训</a></li>
+
+<li class="s"><a href="#">学历培训</a></li>
+<li class="s"><a href="#">文体艺术</a></li>
+<li class="s"><a href="#">0—18岁</a></li>
+<li class="s"><a href="#">出国留学</a></li>
+<li class="s"><a href="#">商学管理</a></li>
+<li class="all"><a href="#">全部课程分类</a></li>
+</ul>
+<div class="menulist">
+<div class="menulistL">
+<dl>
+<dt><a href="xuankecheng2.html">英语培训</a></dt>
+
+<dd><a href="xuankecheng2.html">雅思</a><a href="#">托福</a><a href="#">GRE</a><a href="#">SAT</a><a href="#">GMAT</a><a href="#"> 商务英语</a><a href="#">英语口语</a><a href="#">职业英语</a><a href="#">职称英语</a><a href="#">新概念英语</a><a href="#">剑桥英语</a><a href="#">实用英语</a><a href="#">少儿英语</a></dd>
+</dl>
+<dl>
+
+<dt><a href="#">小语种培训</a></dt>
+<dd><a href="#">日语</a><a href="#">韩语</a><a href="#">法语</a><a href="#">德语</a><a href="#">意大利语</a><a href="#">葡萄牙语</a><a href="#">西班牙语</a><a href="#">泰国语</a><a href="#">阿拉伯语</a><a href="#">俄语</a><a href="#">荷兰语</a></dd>
+</dl>
+<dl>
+<dt><a href="#">汉语方言</a></dt>
+
+<dd><a href="#">对外汉语</a><a href="#">普通话</a><a href="#">粤语</a><a href="#">闽南语</a></dd>
+</dl>
+</div>
+<div class="menulistR">
+<h2 class="tit">推荐学校</h2>
+<ul>
+<li><a href="#" target="_blank">北京诺加培训学校</a></li>
+<li><a href="#" target="_blank">济南青岛亚美欧国际英语</a></li>
+<li><a href="#" target="_blank">启德学府</a></li>
+
+<li><a href="#" target="_blank">艾迪书院</a></li>
+<li><a href="#" target="_blank">老外家教一对一</a></li>
+<li><a href="#" target="_blank">北京市派特森学校</a></li>
+<li><a href="#" target="_blank">北京全封闭英语学校</a></li>
+<li><a href="#" target="_blank"> 北京欧文堂培训中心</a></li>
+<li><a href="#" target="_blank">津桥语言培训中心</a></li>
+<li><a href="#" target="_blank">新动力学校</a></li>
+<li><a href="#" target="_blank">平和英语村</a></li>
+
+<li><a href="#" target="_blank"> 燕园日语韩语</a></li>
+<li><a href="#" target="_blank">南宁环球雅思</a></li>
+<li><a href="#" target="_blank">上海市韦博进修学校</a></li>
+<li><a href="#" target="_blank">上海市朗恩进修学校</a></li>
+<li><a href="#" target="_blank">上海圣约翰培训</a></li>
+</ul>
+</div>
+</div>
+<div class="menulist">
+<div class="menulistL">
+<dl>
+
+<dt><a href="#">小学一对一</a></dt>
+</dl>
+<dl>
+<dt><a href="#">初中一对一</a></dt>
+</dl>
+<dl>
+<dt><a href="#">高中一对一</a></dt>
+</dl>
+<dl>
+<dt><a href="#">小升初一对一</a></dt>
+</dl>
+<dl>
+<dt><a href="#">中考一对一</a></dt>
+
+</dl>
+<dl>
+<dt><a href="#">高考一对一</a></dt>
+</dl>
+</div>
+<div class="menulistR">
+<h2 class="tit">推荐学校</h2>
+<ul>
+<li><a href="#" target="_blank">北京京翰教育</a></li>
+<li><a href="#" target="_blank">安博精学一对一</a></li>
+<li><a href="#" target="_blank">北京名塾教育</a></li>
+<li><a href="#" target="_blank">老外家教一对一</a></li>
+
+<li><a href="#" target="_blank">北京致德培训学校</a></li>
+<li><a href="#" target="_blank">戴尔国际少儿英语</a></li>
+<li><a href="#" target="_blank">宏志教育</a></li>
+<li><a href="#" target="_blank">派特森英语</a></li>
+<li><a href="#" target="_blank">广州精锐机场路中心</a></li>
+<li><a href="#" target="_blank">广州精锐滨江东中心</a></li>
+<li><a href="#" target="_blank">广州精锐华师附中心</a></li>
+<li><a href="#" target="_blank">上海精锐闵行莘庄</a></li>
+<li><a href="#" target="_blank">上海新尚辅导</a></li>
+
+</ul>
+</div>
+</div>
+<div class="menulist">
+<div class="menulistL">
+<dl>
+<dt><a href="#">网络技术培训</a></dt>
+<dd><a href="#">网络工程师</a><a href="#">网络管理员</a><a href="#">网络程序员</a></dd>
+</dl>
+<dl>
+<dt><a href="#">硬件开发培训</a></dt>
+<dd><a href="#">单片机开发</a><a href="#">硬件工程师</a></dd>
+
+</dl>
+<dl>
+<dt><a href="#">软件开发培训</a></dt>
+<dd><a href="#">程序开发</a><a href="#">软件测试</a><a href="#">数据库开发</a></dd>
+</dl>
+<dl>
+<dt><a href="#">平面广告培训</a></dt>
+<dd><a href="#">平面设计</a><a href="#">电脑美术</a><a href="#">Photoshop</a></dd>
+</dl>
+
+<dl>
+<dt><a href="#">网页设计开发培训</a></dt>
+<dd><a href="#">网页设计</a><a href="#">ASP动态网站课程</a><a href="#">PHP网页设计</a><a href="#">Macromedia</a><a href="#">Java网页设计</a><a href="#">网站建设</a></dd>
+</dl>
+<dl>
+<dt><a href="#">影视动画培训</a></dt>
+<dd><a href="#">Maya</a><a href="#">3DS MAX</a><a href="#">动漫艺术设计</a><a href="#">CG动画</a><a href="#">影视后期制作</a><a href="#">影视特效合成</a></dd>
+
+</dl>
+<dl>
+<dt><a href="#">办公应用培训</a></dt>
+<dd><a href="#">电脑操作</a><a href="#">办公应用</a><a href="#/">办公商务应用</a></dd>
+</dl>
+<dl>
+<dt><a href="#">装饰装潢培训</a></dt>
+<dd><a href="#">AUTOCAD</a><a href="#">三维设计师</a><a href="#">家居设计</a></dd>
+</dl>
+
+</div>
+<div class="menulistR">
+<h2 class="tit">推荐学校</h2>
+<ul>
+<li><a href="#" target="_blank">北京完美动力</a></li>
+<li><a href="#" target="_blank">北大青鸟天灿培训中心</a></li>
+<li><a href="#" target="_blank">悦成移动互联网孵化基地</a></li>
+<li><a href="#" target="_blank">大连恒毅电脑学校</a></li>
+<li><a href="#" target="_blank">中影培训基地</a></li>
+<li><a href="#" target="_blank">北京智联经纬培训</a></li>
+
+<li><a href="#" target="_blank">北京金方舟培训中心</a></li>
+<li><a href="#" target="_blank">北航金色前程</a></li>
+<li><a href="#" target="_blank">广州腾科网络技术</a></li>
+<li><a href="#" target="_blank">大连富海教育</a></li>
+<li><a href="#" target="_blank">上海威迅教育</a></li>
+<li><a href="#" target="_blank">上海市朗恩进修学校</a></li>
+<li><a href="#" target="_blank">东华艺宗游戏人才培训</a></li>
+<li><a href="#" target="_blank">上海远见职业培训</a></li>
+</ul>
+z
+</div>
+</div>
+<div class="menulist">
+<div class="menulistL">
+<dl>
+<dt><a href="#">职业资格认证培训</a></dt>
+<dd><a href="#">金融财会</a><a href="#">物流物业</a><a href="#">报关员</a><a href="#">公务员</a><a href="#">心理咨询师</a><a href="#">人力资源</a><a href="#">市场营销</a><a href="#">经济师</a><a href="#">职业经理人</a><a href="#">文秘</a><a href="#">策划师</a><a href="#">导游</a><a href="#">教师资格证</a></dd>
+
+</dl>
+<dl>
+<dt><a href="#">职业技能培训</a></dt>
+<dd><a href="#">口才培训</a><a href="#">医药</a><a href="#">色彩搭配</a><a href="#">驾驶维修</a><a href="#">厨师面点</a><a href="#">服装设计</a><a href="#">美容美发</a><a href="#">化妆摄影</a><a href="#">摄影培训</a><a href="#">汽修培训</a></dd>
+</dl>
+</div>
+
+<div class="menulistR">
+<h2 class="tit">推荐学校</h2>
+<ul>
+<li><a href="#" target="_blank">北京东方行知国际教育</a></li>
+<li><a href="#" target="_blank">北京华世博信研究院</a></li>
+<li><a href="#" target="_blank">静慧心灵心理咨询</a></li>
+<li><a href="#" target="_blank">东方特色医药培训学校</a></li>
+<li><a href="#" target="_blank">北京雅趣摄影培训学院</a></li>
+<li><a href="#" target="_blank">万学金路公务员考试</a></li>
+<li><a href="#" target="_blank">政法英杰教育</a></li>
+
+<li><a href="#" target="_blank">北京金英杰医学教育</a></li>
+<li><a href="#" target="_blank">北京市城建技术培训</a></li>
+<li><a href="#" target="_blank">北京金方舟培训</a></li>
+<li><a href="#" target="_blank">北京国际针灸培训中心</a></li>
+<li><a href="#/" target="_blank">贵州省色妆化妆造型</a></li>
+<li><a href="#" target="_blank">上海远见职业技术培训</a></li>
+<li><a href="#" target="_blank">上海雄鹰美术学校</a></li>
+<li><a href="#" target="_blank">大连富海教育</a></li>
+<li><a href="#" target="_blank">天津领航教育</a></li>
+
+<li><a href="#" target="_blank">好教育培训</a></li>
+<li><a href="#" target="_blank">大连科威职业培训</a></li>
+</ul>
+</div>
+</div>
+<div class="menulist">
+<div class="menulistL">
+<dl>
+<dt><a href="#">考研辅导</a></dt>
+<dd><a href="#">考研专业课辅导</a><a href="#">法硕考研辅导</a><a href="#">MBA联考辅导</a></dd>
+</dl>
+
+<dl>
+<dt><a href="#">同等学历辅导</a></dt>
+<dd><a href="#">申硕辅导综合学科</a><a href="#">申硕英语辅导</a></dd>
+</dl>
+<dl>
+<dt><a href="#">研究生辅导</a></dt>
+<dd><a href="#">普通研究生辅导</a><a href="#">商学院辅导</a><a href="#">在职研究生培训</a></dd>
+</dl>
+<dl>
+<dt><a href="#">高考辅导</a></dt>
+
+<dd><a href="#">高考复读辅导</a><a href="#">成人高考辅导</a></dd>
+</dl>
+<dl>
+<dt><a href="#">专科辅导</a></dt>
+<dd><a href="#">普通高校辅导</a><a href="#">独立学院辅导</a><a href="#">高职学院辅导</a></dd>
+</dl>
+<dl>
+<dt><a href="#">本科辅导</a></dt>
+<dd><a href="#">国办自考辅导</a><a href="#">民办大学辅导</a><a href="#">成教学院辅导</a></dd>
+
+</dl>
+</div>
+<div class="menulistR">
+<h2 class="tit">推荐学校</h2>
+<ul>
+<li><a href="#" target="_blank">京翰教育中心</a></li>
+<li><a href="#" target="_blank">北京大学经济学院</a></li>
+<li><a href="#" target="_blank">首都经济贸易大学</a></li>
+<li><a href="#" target="_blank">中国政法大学</a></li>
+<li><a href="#" target="_blank">中国社会科学院</a></li>
+<li><a href="#" target="_blank">青岛文硕教育咨询</a></li>
+
+<li><a href="#" target="_blank">北京跨考教育培训学校</a></li>
+<li><a href="#" target="_blank">北京金方舟培训中心</a></li>
+<li><a href="#" target="_blank">师大美术辅导美意培训</a></li>
+<li><a href="#" target="_blank">首都师范大学政法学院</a></li>
+<li><a href="#" target="_blank">杭州纳思书院</a></li>
+<li><a href="#" target="_blank">上海千帆进管理进修学院</a></li>
+<li><a href="#" target="_blank">上海交大海外教育学院</a></li>
+</ul>
+</div>
+</div>
+
+<div class="menulist">
+<div class="menulistL">
+<dl>
+<dt><a href="#">体育舞蹈类</a></dt>
+<dd><a href="#">网球</a><a href="#">羽毛球</a><a href="#">足球</a><a href="#">篮球</a><a href="#">保龄球培训</a><a href="#">游泳健身</a><a href="#">拉丁舞</a><a href="#">现代舞</a><a href="#">肚皮舞</a><a href="#">街舞</a><a href="#">踢踏舞</a><a href="#">瑜伽</a></dd>
+
+</dl>
+<dl>
+<dt><a href="#">乐器类</a></dt>
+<dd><a href="#">二胡</a><a href="#">扬琴</a><a href="#">柳琴</a><a href="#">笛子</a><a href="#">葫芦丝</a><a href="#">古筝</a><a href="#">古琴</a><a href="#">钢琴</a><a href="#">电子琴</a><a href="#">小提琴</a><a href="#">中提琴</a></dd>
+</dl>
+
+<dl>
+<dt><a href="#">艺术类</a></dt>
+<dd><a href="#">书法美术</a><a href="#">播音主持</a><a href="#">声乐表演</a><a href="#">编导影视</a><a href="#">戏剧文学</a><a href="#">茶道</a><a href="#">插花</a><a href="#">剪纸</a></dd>
+</dl>
+</div>
+<div class="menulistR">
+<h2 class="tit">推荐学校</h2>
+
+<ul>
+<li><a href="#" target="_blank">奥尔艺考教育培训中心</a></li>
+<li><a href="#" target="_blank">中传百龙艺术培训中心</a></li>
+<li><a href="#" target="_blank">中艺清美艺术培训中心</a></li>
+<li><a href="#" target="_blank">色妆化妆造型学校</a></li>
+<li><a href="#" target="_blank">北京雅趣摄影培训学院</a></li>
+<li><a href="#" target="_blank">艺典艺术培训中心</a></li>
+<li><a href="#" target="_blank">北京星悦国际</a></li>
+<li><a href="#" target="_blank">国图音乐厅培训中心</a></li>
+
+<li><a href="#" target="_blank">上海雄鹰美术学校</a></li>
+<li><a href="#" target="_blank">上海李秋平篮球</a></li>
+<li><a href="#" target="_blank">小飞人篮球俱乐部</a></li>
+<li><a href="#" target="_blank">秦汉胡同国学书院</a></li>
+<li><a href="#" target="_blank">东方童画儿童培训</a></li>
+<li><a href="#" target="_blank">上海朗恩进修学校</a></li>
+</ul>
+</div>
+</div>
+<div class="menulist">
+<div class="menulistL">
+
+<dl>
+<dt><a href="#">少儿培训</a></dt>
+<dd><a href="#">少儿英语</a><a href="#">少儿音乐</a><a href="#">少儿美术</a><a href="#">少儿舞蹈</a><a href="#">少儿书法</a><a href="#">少儿体育</a></dd>
+</dl>
+<dl>
+<dt><a href="#">婴幼儿培训</a></dt>
+<dd><a href="#">幼儿园</a><a href="#">托管</a><a href="#">学前</a><a href="#">亲子教育</a></dd>
+
+</dl>
+<dl>
+<dt><a href="#">中小学培训</a></dt>
+<dd><a href="#">升学辅导</a><a href="#">语文外语</a><a href="#">数理化辅导</a><a href="#">奥数竞赛</a></dd>
+</dl>
+<dl>
+<dt><a href="#">素质拓展</a></dt>
+<dd><a href="#">冬夏令营</a><a href="#">游学</a><a href="#">体能拓展</a></dd>
+
+</dl>
+</div>
+<div class="menulistR">
+<h2 class="tit">推荐学校</h2>
+<ul>
+<li><a href="#" target="_blank">城市海景儿童俱乐部</a></li>
+<li><a href="#" target="_blank">北京名塾教育</a></li>
+<li><a href="#" target="_blank">戴尔国际少儿英语</a></li>
+<li><a href="#" target="_blank">东方金子塔</a></li>
+<li><a href="#" target="_blank">成长天地文化传播</a></li>
+<li><a href="#" target="_blank">北京星悦国际传媒</a></li>
+
+<li><a href="#" target="_blank">北京益智学校</a></li>
+<li><a href="#" target="_blank">小飞人篮球俱乐部</a></li>
+<li><a href="#" target="_blank">南宁善文教育</a></li>
+</ul>
+</div>
+</div>
+<div class="menulist">
+<div class="menulistL">
+<dl>
+<dt><a href="#">留学培训</a></dt>
+<dd><a href="#">高中留学</a><a href="#">本科留学</a><a href="#">硕士留学</a><a href="#">留学预科</a><a href="#">签证辅导</a></dd>
+
+</dl>
+</div>
+<div class="menulistR">
+<h2 class="tit">推荐学校</h2>
+<ul>
+<li><a href="#" target="_blank">启德学府</a></li>
+<li><a href="#" target="_blank">中央财经大学</a></li>
+<li><a href="#" target="_blank">金方舟培训中心</a></li>
+<li><a href="#" target="_blank">北京王府学校</a></li>
+<li><a href="#" target="_blank">南宁环球雅思</a></li>
+<li><a href="#" target="_blank">雅力留学专家 </a></li>
+
+</ul>
+</div>
+</div>
+<div class="menulist">
+<div class="menulistL">
+<dl>
+<dt><a href="#">商学管理</a></dt>
+<dd><a href="#">MBA</a><a href="#">EMBA</a><a href="#">DBA</a><a href="#">EDP</a><a href="#">IMBA</a><a href="#">高层研修</a><a href="#">企业管理</a><a href="#">国学</a></dd>
+
+</dl>
+</div>
+<div class="menulistR">
+<h2 class="tit">推荐学校</h2>
+<ul>
+<li><a href="#" target="_blank">博文思学历教育</a></li>
+<li><a href="#" target="_blank">澳门城市大学</a></li>
+<li><a href="#" target="_blank">北京大学经济学院</a></li>
+<li><a href="#" target="_blank">华世博信</a></li>
+<li><a href="#" target="_blank">国英卓越</a></li>
+</ul>
+
+</div>
+</div>
+
+</div>
+			</div>
+		</div>
+	</div>
+    </div>
+    <div class="box_nan_center fl">
+    	<div class="box_nan_center_shang">
+            <DIV id="swfContent"></DIV>
+            <SCRIPT type="text/javascript">
+                var xmlData="<list><item><img>images/banner1.jpg</img><url>http://www.enet360.com/</url></item><item><img>images/banner2.jpg</img><url>http://www.enet360.com/</url></item><item><img>images/banner3.jpg</img><url>http://www.enet360.com/</url></item><item><img>images/banner4.jpg</img><url>http://www.enet360.com/</url></item></list>";
+                var flashvars = {xmlData:xmlData};
+                var params = {menu:false,wmode:"opaque"};
+                var attributes = {};
+                swfobject.embedSWF("swf/lanren.swf", "swfContent", "547", "189", "9","expressInstall.swf", flashvars, params, attributes);
+            </SCRIPT>
+      </div>
+        <div class="box_nan_center_middle">国庆特价中小学培训，你对症下“班”了么？</div>
+        <ul class="box_nan_center_xia">
+        	<li><a href="xuankecheng2.html">·搭乘2012高考直通车三大物理精选推荐</a><span></span></li>
+            <li><a href="#">·搭乘2012高考直通车三大物理精选推荐</a></li>
+            <li><a href="#">·优质少儿舞蹈开班啦 盘点京城肚皮</a></li>
+            <li><a href="#">·优质少儿舞蹈开班啦 盘点京城肚皮</a></li>
+            <li><a href="#">·名塾教育高三尖子串讲1对1课</a></li>
+            <li><a href="#">·名塾教育高三尖子串讲1对1课</a><span></span></li>
+            <li><a href="#">·京城名师指导语法大合集 雅思语</a><span></span></li>
+            <li><a href="#">·京城名师指导语法大合集 雅思语</a></li>
+        </ul>
+  </div>
+    <div class="box_nan_right fr">
+    	<dl class="box_nan_right_shang">
+        	<dt><span><a href="xuankecheng2.html">更多>></a></span>优惠课程</dt>
+            <dd><span>[语言]</span><a href="xuankecheng2.html">搭乘2012高考直通车三大物理精选</a></dd>
+            <dd><span>[ IT ]</span><a href="#">优质少儿舞蹈开班啦 盘点京城肚</a></dd>
+            <dd><span>[ 1+1]</span><a href="#">名塾教育高三尖子串讲1对1</a></dd>
+            <dd><span>[语言]</span><a href="#">京城名师指导语法大合集 雅思</a></dd>
+            <dd><span>[语言]</span><a href="#">2012高考早打算 京城英语优质补</a></dd>
+            <dd class="kongbai"></dd>
+        </dl>
+        <div class="blank10"></div>
+        <div class="box_nan_right_xia">
+        	<div class="box_nan_right_xia_dian">
+            	<input onclick="javascript:location.href='tijiaoxuqiu.html';" class="tijiaoxuqiu" type="button" />
+                <p>为您量身定做培训课程</p>
+                <input onclick="javascript:location.href='zhuce2.html';" class="mianfeizhuce" type="button" />
+            </div>
+            <div class="box_nan_right_xia_jiao">为您拓展互动招生平台</div>
+        </div>
+    </div>
+</div>
+<div class="blank10"></div>
+<div class="picture"><img src="images/beizhan.jpg" /></div>
+<div class="blank10"></div>
+<div class="box_city">
+    <div class="box_city_left fl">
+    	<div class="box_city_left_shang"><span><a href="xinwenshouye.html">更多>></a></span>培训新闻</div>
+        <div class="box_city_left_content">
+        	<div class="box_city_left_content_1">
+            	<div><a href="nei_news_nr.html"><img src="images/gongque.jpg" /></a></div>
+                <h1><a href="nei_news_nr.html">新闻名称</a></h1>
+                <p><a href="nei_news_nr.html">京城名师指导语法大合集雅思语合集雅思</a></p>
+            </div>
+            <ul class="box_city_left_content_2">
+            	<li><a href="nei_news_nr.html">·京城名师指导语法大合集 雅思语</a></li>
+                <li><a href="#">·2012高考早打算 京城英语优质补习班</a></li>
+                <li><a href="#">·名塾教育高三尖子串讲1对1课</a></li>
+                <li><a href="#">·京城名师指导语法大合集 雅思语</a></li>
+            </ul>
+        </div>
+        <div class="blank10"></div>
+        <div class="box_city_left_content_course">
+        	<ul class="box_city_left_content_course_huan">
+            	<li><a class="hei" href="zuixinkecheng.html">最新课程</a></li>
+                <li><a class="hui" href="zuixinxuexiao.html">最新学校</a></li>
+            </ul>
+            <div class="box_city_left_content">
+                <div class="box_city_left_content_1">
+                    <div><a href="zuixinkecheng.html"><img src="images/ganen.jpg" /></a></div>
+                    <h1><a href="zuixinkecheng.html">新闻名称</a></h1>
+                    <p><a href="zuixinkecheng.html">京城名师指导语法大合集雅思语合集雅思</a></p>
+                </div>
+                <ul class="box_city_left_content_2">
+                    <li><span>[语言]</span><a href="zuixinkecheng.html">京城名师指导语法大合集</a></li>
+                    <li><span>[语言]</span><a href="#">2012高考早打算 京城英语</a></li>
+                    <li><span>[ 1+1]</span><a href="#">名塾教育高三尖子串讲</a></li>
+                    <li><span>[语言]</span><a href="#">京城名师指导语法大合集</a></li>
+                    <li><span>[ 1+1]</span><a href="#">名塾教育高三尖子串讲</a></li>
+                    <li><span>[语言]</span><a href="#">京城名师指导语法大合集</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box_city_left_content_course_2">
+        	<ul class="box_city_left_content_course_2_huan">
+            	<li><a class="hui" href="#">最新课程</a></li>
+                <li><a class="hei" href="zuixinxuexiao.html">最新学校</a></li>
+            </ul>
+            <div class="box_city_left_content">
+                <div class="box_city_left_content_1">
+                    <div><a href="zuixinxuexiao.html"><img src="images/ganen.jpg" /></a></div>
+                    <h1><a href="zuixinxuexiao.html">新闻名称</a></h1>
+                    <p><a href="zuixinxuexiao.html">京城名师指导语法大合集雅思语合集雅思</a></p>
+                </div>
+                <ul class="box_city_left_content_2">
+                    <li><span>[语言]</span><a href="zuixinxuexiao.html">名塾教育高三尖子串讲</a></li>
+                    <li><span>[语言]</span><a href="#">京城名师指导语法大合集</a></li>
+                    <li><span>[ 1+1]</span><a href="#">名塾教育高三尖子串讲</a></li>
+                    <li><span>[语言]</span><a href="#">2012高考早打算 京城英语</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box_city_right fr">
+    	<ul class="box_city_right_city">
+        	<li class="box_city_right_city_current">北京</li>
+            <li>上海</li>
+            <li>广州</li>
+            <li>深圳</li>
+        </ul>
+        <div class="box_city_right_content city1">
+        	<div class="box_city_right_content_pai fl">
+            	<h1><a href="#">语言培训</a></h1>
+                <h2><a href="nei_index.html">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">IT培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">职业培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">0-18岁培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">出国培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">兴趣爱好培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+        </div>
+        <div class="box_city_right_content city2">
+        	<div class="box_city_right_content_pai fl">
+            	<h1><a href="#">语言培训</a></h1>
+                <h2><a href="#">上海市光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">上海教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">IT培训</a></h1>
+                <h2><a href="#">上海市光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">上海京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">职业培训</a></h1>
+                <h2><a href="#">上海市培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">上海市京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">0-18岁培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">出国培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">兴趣爱好培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+        </div>
+        <div class="box_city_right_content city3">
+        	<div class="box_city_right_content_pai fl">
+            	<h1><a href="#">语言培训</a></h1>
+                <h2><a href="#">广州市光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">广州市京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">IT培训</a></h1>
+                <h2><a href="#">广州市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">广州市京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">职业培训</a></h1>
+                <h2><a href="#">广州市培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">广州市京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">0-18岁培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">出国培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">兴趣爱好培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+        </div>
+        <div class="box_city_right_content city4">
+        	<div class="box_city_right_content_pai fl">
+            	<h1><a href="#">语言培训</a></h1>
+                <h2><a href="#">深圳市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">深圳市京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">IT培训</a></h1>
+                <h2><a href="#">深圳市学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区深圳</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">职业培训</a></h1>
+                <h2><a href="#">北京市深圳市</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区深圳市</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">0-18岁培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">出国培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+            <div class="box_city_right_content_pai fl">
+            	<h1><a href="#">兴趣爱好培训</a></h1>
+                <h2><a href="#">北京市西城区光华培训学校</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">杭州京硕教育庆春校区</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <h2><a href="#">老外家教</a></h2>
+                <h3>400-616-1235转80985</h3>
+                <p><a href="#">津桥语言培训中心</a></p>
+                <p><a href="#">艾迪书院</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="blank10"></div>
+<div class="mingshi"><a href="mingshituijian.html">更多>></a></div>
+<div class="blank10"></div>
+<div class="ketang">
+	<dl class="ketang_left fl">
+    	<dt><a href="mingshituijian.html">更多>></a>名师课堂</dt>
+        <dd>[语言]<a href="#">搭乘2012高考直通三大物理精选</a></dd>
+        <dd>[ IT ]<a href="#">优质少儿舞蹈开班啦 盘点京城肚</a></dd>
+        <dd>[ 1+1]<a href="#">名塾教育高三尖子串讲1对1</a></dd>
+        <dd>[语言]<a href="#">京城名师指导语法大合集 雅思</a></dd>
+        <dd>[语言]<a href="#">2012高考早打算 京城英语优质补</a></dd>
+        <dd>[语言]<a href="#">京城名师指导语法大合集 雅思</a></dd>
+        <dd>[语言]<a href="#">2012高考早打算 京城英语优质补</a></dd>
+        <dd>[语言]<a href="#">京城名师指导语法大合集 雅思</a></dd>
+        <dd class="xiamian"></dd>
+    </dl>
+    <ul class="ketang_right fr">
+    	<li>
+          <div class="zuobian"><img src="images/laoshi1.jpg" /></div>
+          <div class="youbian">
+              <h1>袁京慧</h1>
+              <p><span>专长科目：</span>高一高二物理,高三物理</p>
+              <p><span>从教年限：</span>10年</p>
+              <p><span>所属机构：</span>物理专业</p>
+              <p><a href="nei_shizi_nr.html">详细信息>></a></p>
+          </div>
+        </li>
+        <li>
+          <div class="zuobian"><img src="images/laoshi2.jpg" /></div>
+          <div class="youbian">
+              <h1>袁京慧</h1>
+              <p><span>专长科目：</span>高一高二物理,高三物理</p>
+              <p><span>从教年限：</span>10年</p>
+              <p><span>所属机构：</span>物理专业</p>
+              <p><a href="#">详细信息>></a></p>
+          </div>
+        </li>
+        <li>
+          <div class="zuobian"><img src="images/laoshi3.jpg" /></div>
+          <div class="youbian">
+              <h1>袁京慧</h1>
+              <p><span>专长科目：</span>高一高二物理,高三物理</p>
+              <p><span>从教年限：</span>10年</p>
+              <p><span>所属机构：</span>物理专业</p>
+              <p><a href="#">详细信息>></a></p>
+          </div>
+        </li>
+        <li>
+          <div class="zuobian"><img src="images/laoshi4.jpg" /></div>
+          <div class="youbian">
+              <h1>袁京慧</h1>
+              <p><span>专长科目：</span>高一高二物理,高三物理</p>
+              <p><span>从教年限：</span>10年</p>
+              <p><span>所属机构：</span>物理专业</p>
+              <p><a href="#">详细信息>></a></p>
+          </div>
+        </li>
+    </ul>
+</div>
+<div class="blank10"></div>
+<div class="yanjiu"><img src="images/yanjiu.jpg" /></div>
+<div class="blank10"></div>
+<div class="school">
+    <div class="school_left fl">
+    	<div class="school_left_shang"><a href="xuanxuexiao2.html">更多>></a></div>
+        <div class="school_left_xia">
+        	<div class="school_left_xia_top"></div>
+            <div class="school_left_xia_content">
+            	<ul class="school_left_xia_content_xian">
+                	<li>
+                    	<a href="nei_index.html"><img src="images/xuexiao1.jpg" /></a>
+                        <a href="nei_index.html"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao2.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao3.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao4.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao5.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao6.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                </ul>
+                <ul class="school_left_xia_content_hou">
+                	<li>
+                    	<a href="#"><img src="images/xuexiao1.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao2.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao3.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao4.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao5.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                    <li>
+                    	<a href="#"><img src="images/xuexiao6.jpg" /></a>
+                        <a href="#"><p>韦博进修</p></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="school_right fr">
+    	<div class="school_right_more"><a href="xinwenshouye2.html">更多>></a>热点专题</div>
+        <dl class="school_right_content">
+        	<dt><img src="images/child.jpg" /></dt>
+            <dd><a href="#">·优质少儿舞蹈开班啦 盘点京城肚皮</a></dd>
+            <dd><a href="#">·名塾教育高三尖子串讲1对1课</a></dd>
+            <dd><a href="#">·京城名师指导语法大合集 雅思语</a></dd>
+            <dd><a href="#">·2012高考早打算 京城英语优质补习班</a></dd>
+        </dl>
+    </div>
+</div>
+<div class="blank10"></div>
+<div class="youqing">
+	<div class="youqing_tu"><img src="images/youqinglianjie.gif" /></div>
+	<a href="#">平面设计</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="#">会计从业资格证</a>&nbsp;|&nbsp;<a href="##">会计从业资格证</a>&nbsp;|&nbsp;<a href="###">会计从业资格证</a>
+</div>
+<div class="blank15"></div>
+<div class="lianjie"><a href="#">关于应学网</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">产品服务</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">增值服务</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">学校注册</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">渠道加盟</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">联系我们</a></div>
+<div class="blank10"></div>
+<div class="banquan">CopyRight <span>&copy;</span>2001-2011. sooker.com All Rights Reserved  2001-2011, 版权所有：应学网</div>
+<div class="blank15"></div>
+<div class="zhichi">技术支持：联合易网</div>
+<div class="blank15"></div>
+<div class="blank15"></div>
+</body>
+</html>
